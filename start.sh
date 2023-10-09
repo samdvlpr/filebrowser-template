@@ -1,5 +1,7 @@
 #!/bin/sh
 
+echo $RAILWAY_VOLUME_MOUNT_PATH
+
 set -e
 
 if [ -z "$RAILWAY_VOLUME_MOUNT_PATH" ]; then
