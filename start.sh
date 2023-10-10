@@ -1,7 +1,5 @@
 #!/bin/sh
 
-echo $RAILWAY_VOLUME_MOUNT_PATH
-
 set -e
 
 if [ -z "$RAILWAY_VOLUME_MOUNT_PATH" ]; then
@@ -9,6 +7,8 @@ if [ -z "$RAILWAY_VOLUME_MOUNT_PATH" ]; then
     echo upon attaching a volume let this service rebuild
     exit 0
 fi
+
+echo "$RAILWAY_VOLUME_MOUNT_PATH"
 
 if [ -z "$WEB_USERNAME" ]; then
     echo missing the WEB_USERNAME variable, please add it to continue
