@@ -56,6 +56,8 @@ fi
 
 echo $WEB_USERNAME > $FILEBROWSER_USERNAME_PATH
 
+touch filebrowser.db
+
 filebrowser users update $WEB_USERNAME --password $WEB_PASSWORD --database $DATABASE_PATH > /dev/null
 
 filebrowser config set --port $PORT --database $DATABASE_PATH > /dev/null
